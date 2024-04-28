@@ -1,95 +1,129 @@
-@charset "UTF-8";
-a,
-abbr,
-acronym,
-address,
-applet,
-article,
-aside,
-audio,
-b,
-big,
-blockquote,
+/* @charset "utf-8";
+@import url('font.css');
+
+/* ****************************************** Reset ****************************************** */
+/* :root {
+  font-size: 62.5%;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*[class]:before,
+*[class]:after {
+  box-sizing: border-box;
+}
+
+*[class]._hidden {
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(.0625rem, .0625rem, .0625rem, .0625rem);
+  clip-path: inset(50%);
+  position: absolute;
+  width: .0625rem;
+  height: .0625rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+* {
+  outline: 0 !important;
+  box-sizing: border-box;
+}
+
+html,
 body,
-canvas,
-caption,
-center,
-cite,
-code,
-dd,
-del,
-details,
-dfn,
-div,
-dl,
-dt,
-em,
-embed,
-fieldset,
-figcaption,
-figure,
-footer,
-form,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-header,
-hgroup,
-html,
-i,
-iframe,
-img,
-ins,
-kbd,
-label,
-legend,
+div,
+p,
+blockquote,
+pre,
+code,
+address,
+ul,
+ol,
 li,
-mark,
 menu,
 nav,
-object,
-ol,
-output,
-p,
-pre,
-q,
-ruby,
-s,
-samp,
 section,
-small,
-span,
-strike,
-strong,
-sub,
-summary,
-sup,
+article,
+aside,
+dl,
+dt,
+dd,
 table,
-tbody,
-td,
-tfoot,
-th,
 thead,
-time,
-tr,
-tt,
-u,
-ul,
-var,
+tbody,
+tfoot,
+label,
+caption,
+th,
+td,
+form,
+fieldset,
+legend,
+hr,
+input,
+button,
 textarea,
-video {
-  border: 0;
-  font-size: 100%;
-  font: inherit;
+object,
+figure,
+figcaption {
   margin: 0;
   padding: 0;
-  vertical-align: baseline;
-  font-family: "Noto Sans", sans-serif !important;
-  color: #2d2d2d;
-  letter-spacing: -0.05em;
+}
+
+html,
+body {
+  width: 100%;
+
+}
+
+html {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+body {
+
+  margin: 0;
+  height: 100%;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-text-size-adjust: none;
+  width: 100%;
+  background: #fff;
+  -webkit-text-size-adjust: none;
+  word-wrap: break-word;
+  word-break: break-all;
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 400;
+  color: #666;
+}
+
+body,
+select,
+input,
+a,
+button,
+footer,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1
 }
 
 article,
@@ -106,12 +140,17 @@ section {
   display: block;
 }
 
-body {
-  line-height: 1;
+body,
+input,
+select,
+textarea,
+button {
+  border: none;
 }
 
+ul,
 ol,
-ul {
+li {
   list-style: none;
 }
 
@@ -137,7 +176,13 @@ table {
 }
 
 a {
+  color: #000;
   text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
 }
 
 .hidden {
@@ -152,51 +197,1445 @@ a {
 }
 
 
-@font-face {
-  font-family: "Noto Sans";
-  font-weight: 300;
-  src: url(../font/NotoSans-Light.eot);
-  src: url(../font/NotoSans-Light.eot?#iefix) format("embedded-opentype"), url(../font/NotoSans-Light.woff) format("woff"), url(../font/NotoSans-Light.ttf) format("truetype");
+/* ****************************************** ui style ****************************************** */
+.wrap {
+  margin: 0 auto;
+  width: 100%;
+  display: block;
+  box-sizing: content-box;
+  position: relative;
+  min-height: 100%;
+  clear: both;
 }
-@font-face {
-  font-family: "Noto Sans";
-  font-weight: 400;
-  src: url(../font/NotoSans-Regular.eot);
-  src: url(../font/NotoSans-Regular.eot?#iefix) format("embedded-opentype"), url(../font/NotoSans-Regular.woff) format("woff"), url(../font/NotoSans-Regular.ttf) format("truetype");
+
+.header {
+  position: relative;
 }
-@font-face {
-  font-family: "Noto Sans";
+
+.headerInner {
+  position: relative;
+  margin: 0 auto;
+  /* height: 8.125rem; */
+}
+
+.header .headerInner .logo__usg img {
+  vertical-align: middle;
+}
+
+
+.util {
+  max-width: 75rem;
+  height: 4.0625rem;
+  line-height: 4.0625rem;
+  margin: 0 auto;
+
+}
+
+.logo {
+  float: left;
+}
+
+.util_right {
+  float: right;
+}
+
+.nav_item li {
+  position: relative;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 800;
+  text-align: center;
+  color: #004274;
+  line-height: 1.5;
+  padding: 0;
+}
+
+.nav_item li .btn_login {
+  position: relative;
+}
+
+.nav_item li .btn_login::before,
+.nav_item li .btn_join::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -1.25rem;
+}
+
+.nav_item li .btn_login::before {
+  width: 1.25rem;
+  height: 1.25rem;
+  background: url(../images/ico_login.svg) no-repeat center;
+}
+
+.nav_item li .btn_join::before {
+  width: 1.25rem;
+  height: 1.25rem;
+  background: url(../images/ico_user.svg) no-repeat center;
+}
+
+.nav_item li.mlf20 {
+  margin-left: 1.25rem;
+}
+
+.naviWrap nav {
+  background-color: #113E62;
+}
+
+
+
+.w-100 {
+  width: 100% !important;
+}
+
+.d-block {
+  display: block !important;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.visual {
+  position: relative
+}
+
+.visual .swiper {
+  width: 100%;
+  height: 26.25rem;
+  background-color: khaki;
+
+
+}
+
+.visual .swiper-wrapper {}
+
+.visual .swiper-slide {
+  height: 26.25rem;
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+  padding: .9375rem 0;
+}
+
+.visual .swiper-slide.tp1 {
+  background: url("../images/banner_bg01.png") 50% no-repeat;
+  background-size: cover;
+
+
+}
+
+.visual .swiper-slide.tp2 {
+  background: url("../images/banner_bg02.png") 50% no-repeat;
+  background-size: cover;
+}
+
+.visual .swiper-slide.tp3 {
+  background: url("../images/banner_bg03.png") 50% no-repeat;
+  background-size: cover;
+}
+
+
+.visual .vslCntBox {
+  max-width: 75rem;
+  padding: 0;
+}
+
+.visual .vslCntBox {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+}
+
+.visual .vslCntBox h3 {
+  font-size: 24px;
+
   font-weight: 500;
-  src: url(../font/NotoSans-Medium.eot);
-  src: url(../font/NotoSans-Medium.eot?#iefix) format("embedded-opentype"), url(../font/NotoSans-Medium.woff) format("woff"), url(../font/NotoSans-Medium.ttf) format("truetype");
+  color: #fff;
+  display: block;
 }
-@font-face {
-  font-family: "Noto Sans";
-  font-weight: 700;
-  src: url(../font/NotoSans-Bold.eot);
-  src: url(../font/NotoSans-Bold.eot?#iefix) format("embedded-opentype"), url(../font/NotoSans-Bold.woff) format("woff"), url(../font/NotoSans-Bold.ttf) format("truetype");
+
+.visual .vslCntBox h3 p {
+  line-height: 1.6875rem;
 }
-@font-face {
-  font-family: "Noto Sans";
-  font-weight: 300;
-  src: url(../font/NotoSans-Light.eot);
-  src: url(../font/NotoSans-Light.eot?#iefix) format("embedded-opentype"), url(../font/NotoSans-Light.woff) format("woff"), url(../font/NotoSans-Light.ttf) format("truetype");
+
+.visual .vslCntBox h2 {
+
+  font-size: 3.25rem;
+  font-weight: 800;
+  color: #fff;
+  margin-top: 1.25rem;
+  text-shadow: .25rem .25rem .625rem rgba(0, 0, 0, 0.5);
 }
-@font-face {
-  font-family: "Noto Sans";
+
+.visual .vslCntBox .lineTxt {
+  position: relative;
+  margin-top: 1.25rem;
+  font-size: 24px;
   font-weight: 400;
-  src: url(../font/NotoSans-Regular.eot);
-  src: url(../font/NotoSans-Regular.eot?#iefix) format("embedded-opentype"), url(../font/NotoSans-Regular.woff) format("woff"), url(../font/NotoSans-Regular.ttf) format("truetype");
+  color: #fff;
+  line-height: 1.5rem
 }
-@font-face {
-  font-family: "Noto Sans";
-  font-weight: 500;
-  src: url(../font/NotoSans-Medium.eot);
-  src: url(../font/NotoSans-Medium.eot?#iefix) format("embedded-opentype"), url(../font/NotoSans-Medium.woff) format("woff"), url(../font/NotoSans-Medium.ttf) format("truetype");
+
+/* .visual .vslCntBox .lineTxt span {
+  padding-left: 1.25rem;
+  line-height: 2rem
 }
-@font-face {
-  font-family: "Noto Sans";
+ */
+
+.visual .swiper-pagination {
+  color: white;
+  line-height: 0;
+  bottom: 3.125rem
+}
+
+.visual .swiper-pagination-bullet {
+  width: 1rem;
+  height: 1rem;
+  background: #fff;
+  opacity: 0.2
+}
+
+.visual .swiper-pagination-bullet-active {
+  width: 3rem;
+  height: 1rem;
+  background: #fff;
+  opacity: 1;
+  border-radius: .9375rem
+}
+
+
+.visual .vslCntBox .visual_area {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-0%, -50%);
+  width: 70%;
+}
+
+.img_float {
+  float: right;
+}
+
+
+
+/**********
+    ICONS
+***********/
+.icons {
+  display: inline-flex;
+  position: relative;
+  vertical-align: -0.375rem;
+}
+
+.icons:before {
+  content: "";
+  display: inline-block;
+  width: 1.125rem;
+  height: 1.125rem;
+  background-position: 50%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+/* .icons.i_visual_prev:before {
+  background-image: url('../images/ico_i_center_prev.png');
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.icons.i_visual_next:before {
+  background-image: url('../images/ico_i_center_next.png');
+  width: 1.5rem;
+  height: 1.5rem;
+} */
+
+.icons.i_play:before {
+  background: url('../images/ico_i_play.png') no-repeat 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+
+.icons.i_stop:before {
+  background: url('../images/ico_i_stop.png') no-repeat 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+
+/*  /////////////////////////////////////////////////////////////////////////////////////////////////// 
+                  강좌소개
+ /////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+.bk-slider {
+  position: relative;
+  width: 90vw;
+
+  height: auto;
+  padding: 3.125rem 0 6.25rem;
+}
+
+.bk-slider .swiper02 {
+  width: 100%;
+  height: 12.5rem;
+  overflow: visible;
+
+  padding: 0 15% !important;
+}
+
+.bk-slider .swiper-slide img {
+  box-shadow: 0rem .625rem 1.875rem rgba(0, 0, 0, 0.05);
+  height: 9.375rem;
+  width: 100%;
+}
+
+.bk-slider .swiper-slide {
+  text-align: center;
+  font-size: 1.125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0rem;
+  background: white;
+  transition: all 0.3s ease;
+
+  height: auto;
+}
+
+.bk-slider .swiper-slide.swiper-slide-active {
+  color: #fff;
+  background: linear-gradient(45deg, #f69259, #f16975);
+  transform: scale(1.4);
+  z-index: 2;
+}
+
+/* ARROWS */
+.bk-slider .swiper-button-prev,
+.bk-slider .bk-slider .swiper-button-next {
+  color: #f69259;
+}
+
+.bk-slider .swiper02 .swiper-button-nex {
+  left: 86% !important;
+}
+
+/* PAGINATION */
+.bk-slider .swiper-pagination-bullet {
+  width: 1.25rem;
+  height: 1.25rem;
+  text-align: center;
+  line-height: 1.25rem;
+  font-size: .75rem;
+  color: #000;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.bk-slider .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  color: #fff;
+  background: linear-gradient(45deg, #f69259, #f16975);
+}
+
+
+/*  /////////////////////////////////////////////////////////////////////////////////////////////////// 
+                  Title
+ /////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.title_lg {
+  max-width: 75rem;
+  display: block;
+  font-size: 2.25rem;
+  color: #000;
   font-weight: 700;
-  src: url(../font/NotoSans-Bold.eot);
-  src: url(../font/NotoSans-Bold.eot?#iefix) format("embedded-opentype"), url(../font/NotoSans-Bold.woff) format("woff"), url(../font/NotoSans-Bold.ttf) format("truetype");
+  position: relative;
 }
+
+.title_lg span {
+  color: #007AF5;
+}
+
+.title_lg::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -0.75rem;
+  left: 0;
+  width: 19.625rem;
+  height: .75rem;
+  background: url(../images/titleLine_blue.svg) no-repeat center;
+}
+
+/*  /////////////////////////////////////////////////////////////////////////////////////////////////// 
+                   강좌소개 Area
+ /////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.courseInfo {
+  padding: 5rem 0;
+}
+
+.courseInfo .courseInfoWrap {
+  margin: 0 auto;
+  display: block;
+  position: relative;
+}
+
+.courseInfo .txt_total {
+  font-size: 1.125rem;
+  text-align: center;
+  font-weight: 800;
+  color: #fff;
+  padding: .5rem 1.5625rem;
+  height: 2.25rem;
+  background: #007AF5;
+  border-radius: 1.875rem;
+  position: relative;
+}
+
+.courseInfo .txt_total::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: .5rem;
+  right: 0;
+  width: .9375rem;
+  height: .9375rem;
+  background: url(../images/ico_plus.svg) no-repeat center;
+  padding-left: 1.875rem;
+}
+
+.courseInfo .titWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+}
+
+.courseInfo .titWrap .titArea {
+  width: 75rem;
+  height: auto;
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+/*  /////////////////////////////////////////////////////////////////////////////////////////////////// 
+                   수평 tab Area
+ /////////////////////////////////////////////////////////////////////////////////////////////////// */
+.hori_Tab>input,
+.hori_Tab section>div {
+  display: none;
+}
+
+#tab1:checked~section .tab1,
+#tab2:checked~section .tab2,
+#tab3:checked~section .tab3 {
+  display: block;
+}
+
+#tab1:checked~nav .tab1,
+#tab2:checked~nav .tab2,
+#tab3:checked~nav .tab3 {
+  color: #222;
+}
+
+.hori_Tab {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 2.8125rem;
+}
+
+.hori_Tab .tabnaviWrap {
+  display: block;
+  margin: 0 auto;
+  max-width: 75rem;
+}
+
+.hori_Tab .tabNavi {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hori_Tab .tabNavi li label {
+  float: left;
+  padding: 0 1.5625rem;
+  border: .125rem solid #999999;
+  background: #fff;
+  color: #999;
+  font-size: 1.125rem;
+  font-weight: 700;
+  height: 3.125rem;
+  line-height: 3.125rem;
+  border-radius: 3.125rem;
+  cursor: pointer;
+  margin-right: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.hori_Tab .tabNavi li label:hover {
+  background: #007AF5;
+  color: #fff;
+  border: none;
+}
+
+.hori_Tab section {
+  clear: both;
+}
+
+.hori_Tab section div {
+  padding: 1.25rem;
+  width: 100%;
+  height: 32.5rem;
+  border: .0625rem solid #ddd;
+  background: #fff;
+  line-height: 1.5rem;
+  color: #444;
+}
+
+#tab1:checked~nav .tab1 label,
+#tab2:checked~nav .tab2 label,
+#tab3:checked~nav .tab3 label {
+  background: #007AF5;
+  color: #fff;
+  position: relative;
+  border: 0;
+}
+
+
+#tab1:checked~nav .tab1 label:after,
+#tab2:checked~nav .tab2 label:after,
+#tab3:checked~nav .tab3 label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0;
+  width: 100%;
+  background: #ffffff;
+  left: 0;
+}
+
+
+
+/*  /////////////////////////////////////////////////////////////////////////////////////////////////// 
+                  교육 과정 소개
+ /////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.trainingWrap {
+  max-width: 75rem;
+  display: block;
+  margin: 0 auto
+}
+
+.elementor-wrap {
+  width: 100%;
+  max-width: 75rem;
+
+}
+
+.elementor-wrap .elementor-container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-top: 2.5rem;
+  gap: 1.25rem;
+
+}
+
+.elementor-wrap .elementor-container .elementor-card {
+  display: inline;
+  list-style-type: none;
+  border: .1875rem solid #0064BC;
+  border-radius: 1.25rem;
+  width: 100%;
+}
+
+.elementor-wrap .elementor-container .elementor-card a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1.875rem 3.75rem;
+  position: relative;
+  border-radius: 1.25rem;
+  background-color: #fff;
+}
+
+.elementor-wrap .elementor-container .elementor-card a:hover {
+  background: #0064BC;
+  color: #fff;
+  border-radius: 1rem;
+
+}
+
+.elementor-wrap .elementor-container .elementor-card a.img01:hover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -0.1875rem;
+  left: 50%;
+  transform: translate(-50%, 50%);
+
+}
+
+.elementor-wrap .elementor-container .elementor-card a.img01:hover::after {
+  width: 9.375rem;
+  height: 9.375rem;
+  background: url(../images/img03.png) no-repeat center 100%;
+  background-size: 100% 100%;
+}
+
+.elementor-wrap .elementor-container .elementor-card a.img02:hover::after {
+  width: 9.375rem;
+  height: 9.375rem;
+  background: url(../images/img02.png) no-repeat center 100%;
+}
+
+.elementor-wrap .elementor-container .elementor-card a.img03:hover::after {
+  width: 9.375rem;
+  height: 9.375rem;
+  background: url(../images/img_banner02.png) no-repeat center 100%;
+}
+
+.elementor-wrap .elementor-container .elementor-card a .head_tit {
+  font-style: 1.5rem;
+  font-weight: 700;
+}
+
+.elementor-wrap .elementor-container .elementor-card a img.mt24 {
+  margin-top: 1.5rem;
+}
+
+.elementor-wrap .elementor-container .elementor-card a .sub_tit {
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  margin-top: 1.5rem;
+  text-align: center;
+  word-break: break-word;
+
+}
+
+.elementor-wrap .elementor-container .elementor-card a .sub_tit span {
+  display: block;
+}
+
+.bg_lightblue {
+  background-color: #DEF3FF;
+} 
+
+
+
+/* vertical tab  */
+.flex {
+  display: flex;
+}
+
+/*subTab01*/
+
+.innWrap {
+  height: 100%
+}
+
+.subTab01 {
+  justify-content: space-between
+}
+
+.subTab01 .nav {
+  width: 18.75rem;
+  margin-right: 3.75rem
+}
+
+.subTab01 .nav li {
+  width: 100%;
+  display: flex;
+  margin-bottom: .9375rem
+}
+
+.subTab01 .nav li a {
+  width: 100%;
+  position: relative;
+  display: block;
+  height: 4.875rem;
+  line-height: 4.875rem;
+  text-align: center;
+  color: #413a7a;
+  font-weight: 600;
+  background: #ecebf4;
+  border-radius: .5rem;
+   font-style: 1.875rem;
+}
+
+.subTab01 .nav li a.active {
+  background: #413a7a;
+  color: #fff
+}
+
+.subTab01 .nav li div {
+  width: 100%;
+  display: flex
+}
+
+.subTab01 .nav li div:hover>a {
+  border: .25rem solid #544E91;
+  color: #544E91
+}
+
+.subTab01 .con {
+  flex: 1
+}
+
+
+.lineBox {
+  padding: 2.4375rem;
+  border: .0625rem solid #DBDBDB;
+  border-radius: .5rem
+}
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////// 
+  About 
+///////////////////////////////////////////////////////////////////////////////////////////////////  */
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+/* .subBody {
+  padding: 20px;
+} */
+
+.subcontent .inner {
+  max-width: 75rem;
+	margin: 0 auto;
+}
+
+.subcontent .con-tit {
+  padding-bottom: 32px;
+}
+
+.subcontent .section-fir.whiteBg {
+  padding-top: 65px;
+}
+
+.subcontent .flex-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.subcontent .flex-wrap .con-tit {
+  font-size: 40px;
+  color: #222222;
+  line-height: 56px;
+}
+
+.subcontent .section-fir .con-tit{
+  padding: 73px 0 32px;
+}
+
+.subcontent .section-fir .flex-wrap {
+  padding-bottom: 80px;
+}
+
+.subcontent .section-fir .flex-wrap img {
+  width: 418px;
+  height: 320px;
+}
+
+.subcontent .section-fir.whiteBg .btimg {
+  padding-bottom: 80px;
+}
+
+.subcontent .flex-wrap .con-tt {
+  font-size: 24px;
+  color: #666666;
+  line-height: 32px;
+}
+
+.subcontent .con-tt.ttColor {
+  color: #222222;
+}
+
+.subcontent .con-tt.ttColor span {
+  color: #113e62;
+  font-weight: bold;
+}
+
+.subcontent .grayBg {
+  background: #f6f6f6;
+}
+
+.subcontent .section-sec .flex-wrap {
+  padding: 75px 0;
+  align-items: center;
+  text-align: right;
+}
+
+.subcontent .section-sec .flex-wrap img {
+  width: 418px;
+  height: 330px;
+}
+
+.subcontent .section-thi {
+  padding: 80px 0 83px;
+}
+
+.subcontent .section-thi img {
+  width: 418px;
+  height: 266px;
+  padding-top: 26px;
+}
+
+.subcontent .section-fou {
+  padding: 111px 0;
+}
+
+.subcontent .section-fou img {
+  width: 418px;
+  height: 258px;
+}
+
+.subcontent .section-fou .flex-wrap {
+  align-items: center;
+  text-align: right;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////// 
+  교육과정 > 플랫폼 비즈니스 
+///////////////////////////////////////////////////////////////////////////////////////////////////  */
+
+.subContent .education .secEdu {
+  background-image: url(../임시img/img_platform_02.png), url(../임시img/img_platform_background.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 50% 76%, center;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+.subContent .education .secEdu .flex-wrap {
+  display: block;
+  text-align: center;
+}
+
+.subContent .education .secEdu .top-edutit {
+  font-size: 42px;
+  color: #fff;
+  line-height: 56px;
+  font-weight: 400;
+  padding:60px 0 48px;
+}
+
+.education .secEdu .flex-wrap .img-platform {
+  width: 272px;
+  height: 200px;
+}
+
+.education .secEdu .top-edutit span {
+  font-weight: bold;
+}
+
+.subContent .education .edu-tit{
+  padding: 64px 0 48px;
+  font-size: 40px;
+  color: #222222;
+  font-weight: bold;
+  text-align: center;
+  line-height: 48px;
+}
+
+.education .edu-signature .flex-wrap {
+  display: flex;
+  gap: 24px;
+  padding-bottom: 64px;
+}
+
+.education .edu-signature .flex-wrap .eduBox {
+  box-shadow: 2px 2px 10px #00000029;
+  border-radius: 16px;
+  opacity: 1;
+  padding: 8px;
+  box-sizing: border-box;
+  flex: 1;
+}
+
+.education .edu-signature .eduBox .eduList {
+  border: 2px solid #1f5ba2;
+  border-radius: 12px;
+  opacity: 1;
+  padding: 24px 10px 33px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+  word-break: keep-all;
+}
+
+.edu-signature .eduBox .eduList .list-tit {
+  font-size: 24px;
+  line-height: 56px;
+  font-weight: bold;
+  color: #1f5ba2;
+  position: relative;
+}
+
+.edu-signature .eduBox .eduList .list-tit::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background: #1f5ba2;
+  bottom: 0;
+  left: 158px;
+}
+
+.subContent .education .edu-theme {
+  background: url(../임시img/img_theme_background.png) no-repeat center;
+  background-position: cover;
+  height: 720px;
+}
+
+.subContent .education .edu-theme .flex-wrap {
+  flex-direction: column;
+  gap: 24px;
+}
+
+.education .edu-theme .flex-wrap .theme-list {
+  box-shadow: 2px 2px 10px #00000029;
+  border-radius: 16px;
+  opacity: 1;
+  background: #fff;
+  padding: 4px 0 4px 20px;
+}
+
+.education .edu-theme .flex-wrap .themeBox {
+  display: flex;
+  align-items: center;
+}
+
+.education .edu-theme .themeBox .listBox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 48px;
+  gap: 28px;
+}
+
+.education .edu-theme .themeBox .lev-tit {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  color: #33a3ff;
+  padding-right: 30px;
+}
+
+.education .edu-theme .theme-list {
+  position: relative;
+}
+
+.education .edu-theme .theme-list::after {
+  content: '';
+  display: inline-block;
+  width: 2px;
+  height: 50px;
+  background: #cccccc;
+  position: absolute;
+  left: 100px;
+  top: 16px;
+}
+
+.education .edu-theme .theme-list:nth-child(4) {
+   padding-right: 38px;
+}
+
+.education .edu-theme .theme-list:nth-child(4)::after {
+  left: 184px;
+}
+.education .edu-theme .theme-list.caps .lev-tit::after {
+  top: 0;
+}
+
+.education .edu-theme .themeBox .lev-tit p {
+  font-size: 20px;
+  height: 24px;
+  line-height: 26px;
+}
+
+.education .edu-theme .themeBox .lev-tit span {
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: -0.8px;
+  line-height: 48px;
+  width: 52px;
+}
+
+.education .edu-theme .flex-wrap .theme-list {
+  border-left: 16px solid #c8e4ff;
+}
+
+.education .edu-theme .flex-wrap .theme-list:nth-child(2) {
+  border-left: 16px solid #8ec7ff;
+}
+
+.education .edu-theme .flex-wrap .theme-list:nth-child(3) {
+  border-left: 16px solid #4ba7ff;
+}
+
+.education .edu-theme .flex-wrap .theme-list:nth-child(4) {
+  border-left: 16px solid #0886FF;
+}
+
+.education .edu-theme .flex-wrap .theme-list:last-child {
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 38px;
+  color: #fff;
+  background: transparent linear-gradient(94deg,#3ec4ff 0%,#008da9 100%) 0% 0% no-repeat padding-box;
+  box-shadow: 2px 2px 10px #00000029;
+  border-radius: 16px;
+  opacity: 1;
+  padding: 21px 0;
+  text-align: center;
+  border-left: none;
+}
+
+.education .edu-theme .flex-wrap .theme-list:last-child::after {
+  display: none;
+}
+
+.education .edu-theme .themeBox .listBox li {
+  position: relative;
+  
+}
+
+.education .edu-theme .themeBox .listBox li::before {
+  content: '';
+  display: inline-block;
+  background: url(../images/ico_circle.svg);
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 3px;
+  left: -12px;
+}
+
+.education .edu-theme .theme-list.caps .lev-tit {
+  text-align: left;
+  font-weight: bold;
+}
+
+.education .edu-theme .theme-list.caps .lev-tit p {
+  line-height: 26px;
+  font-size: 24px;
+}
+
+.education .edu-theme .theme-list.caps .themeBox {
+  padding: 12px 0 12px;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////// 
+  교육과정 > 첨단제조업
+///////////////////////////////////////////////////////////////////////////////////////////////////  */
+
+.subContent .education .secEdu.bg-manage {
+  background-image: url(../임시img/img_platform_background.png);
+}
+
+.subContent .education .secEdu .sub-tit {
+  font-size: 26px;
+  font-weight: bold;
+  color: #fff;
+  padding-top: 13px;
+}
+
+.edu-manage .edu-signature .eduBox .eduList {
+  padding: 32px 10px;
+  height: 132px;
+  justify-content: center;
+}
+
+.edu-manage .edu-signature .eduBox .eduList .list-tit::after {
+  display: none;
+}
+
+.edu-manage .edu-signature .eduBox .eduList .list-tit {
+  line-height: 32px;
+}
+
+.edu-manage .edu-theme .flex-wrap .theme-list {
+  padding-left: 12px;
+  padding-right: 93px;
+}
+
+.edu-manage .edu-theme .themeBox .lev-tit {
+  padding-right: 22px;
+  align-items: center;
+}
+
+.edu-manage .edu-theme .themeBox .listBox.listCol {
+  flex-direction: column;
+  gap: 8px;
+}
+
+.edu-manage .edu-theme .themeBox .listBox.listCol li {
+  line-height: 19px;
+}
+
+.edu-manage .edu-theme .theme-list:nth-child(4) {
+  padding-right: 22px;
+}
+
+.edu-manage .edu-theme .theme-list:nth-child(4)::after {
+  left: 100px;
+}
+
+.edu-manage .edu-theme .themeBox .listBox {
+  align-items: start;
+}
+
+.edu-manage .edu-theme .themeBox .listBox.listCol li::before {
+  top: 5px;
+}
+
+/* 첨단 제조업 과정 Table Tab */
+
+.edu-manage .descTab .tab-list {
+  display: flex;
+  gap: 16px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 16px;
+}
+
+.edu-manage .descTab .tab-list .tab-button{
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 26px;
+  color: #999999;
+  border: 2px solid #999999;
+  border-radius: 30px;
+  padding: 10px 14px;
+  transition: all 0.2s;
+}
+
+.edu-manage .descTab .tab-list .tab-button.on {
+  background: #007af5;
+  color: #fff;
+  border-color: #007af5;
+}
+
+.edu-manage .descTab .tab-list .tab-button:hover {
+  background: #007af5;
+  color: #fff;
+  border-color: #007af5;
+  cursor: pointer;
+}
+
+.edu-manage .descTab .tab-content-wrap {
+  padding: 40px 15px 64px 15px;
+  display: none;
+}
+
+.edu-manage .descTab .tab-content-wrap.show {
+  display: block;
+}
+
+.edu-manage .descTab .tab-content {
+  display: flex;
+  gap: 34px;
+  justify-content: space-between;
+  /* word-break: keep-all; */
+}
+
+.edu-manage .descTab .tab-content .con-left-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 358px;
+}
+
+.edu-manage .descTab .desc-table {
+  width: auto;
+}
+
+.edu-manage .descTab .tab-content .top-wrap .step {
+  display: inline-block;
+  background: #113e62;
+  padding: 5px 17px;
+  color: #fff;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  line-height: 19px;
+}
+.edu-manage .descTab .tab-content .top-wrap .step-tit {
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 38px;
+  color: #222222;
+  margin-bottom: 16px;
+}
+
+.edu-manage .descTab .tab-content .top-wrap .step-txt {
+  font-size: 16px;
+  color: #222222;
+  line-height: 24px;
+}
+
+.edu-manage .descTab .tab-content .bottom-wrap {
+  margin-top: 40px;
+}
+
+.edu-manage .descTab .tab-content .bottom-wrap .way-tit {
+  font-size: 24px;
+  font-weight: bold;
+  color: #222222;
+  line-height: 29px;
+}
+
+.edu-manage .descTab .bottom-wrap .num-wrap {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.edu-manage .descTab .bottom-wrap .num-wrap .num {
+  font-size: 16px;
+  font-weight: bold;
+  color: #113e62;
+  line-height: 28px;
+}
+
+.edu-manage .descTab .bottom-wrap .num-wrap .num-txt {
+  font-size: 16px;
+  color: #222222;
+  line-height: 28px;
+}
+
+.edu-manage .desc-table {
+  border-bottom: 2px solid #b2ddff;
+  border-right: none !important;
+  color: #222222;
+  text-align: center;
+}
+
+.edu-manage .desc-table tr {
+  height: 37px;
+  border-bottom: 1px solid #bbbbbb;
+}
+
+.edu-manage .desc-table th {
+  height: 41px;
+}
+
+.edu-manage .desc-table td {
+  font-size: 14px;
+}
+
+.edu-manage .desc-table thead tr th {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 19px;
+  color: #222222;
+  background: #f5f5f5;
+  border-right: 1px solid #bbbbbb;
+  border-bottom: 1px solid #bbbbbb;
+}
+
+.edu-manage .desc-table .tdBlue, .edu-manage .desc-table .tdBlack{
+  padding: 0 22px;
+  border-right: 1px solid #bbbbbb;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.edu-manage .desc-table .tdBlue {
+  color:#00428e;
+  border-right: 1px solid #bbbbbb;
+}
+
+.edu-manage .desc-table .tdBlack {
+  color: #222222;
+  border-right: 1px solid #bbbbbb;
+}
+
+.edu-manage .desc-table .bgBlue {
+  background: #D6edff;
+  opacity: 1;
+  border-right: 1px solid #bbbbbb;
+}
+
+.edu-manage .desc-table .bgOrg {
+  background: #fff8e9;
+  border-right: 1px solid #bbbbbb;
+}
+
+.edu-manage .desc-table .bgGrn {
+  background: #efffe6;
+  border-right: 1px solid #bbbbbb;
+}
+
+.edu-manage .desc-table td:last-child {
+  border-right: transparent;
+  border-left: 1px solid #bbbbbb;
+}
+
+.edu-manage .desc-table th:last-child {
+  border-right: transparent;
+} 
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////// 
+  교육과정 > 산업디지털트윈
+///////////////////////////////////////////////////////////////////////////////////////////////////  */
+
+.subContent .education .secEdu.bg-digital {
+  background-image: url(../임시img/img_platform_background.png);
+}
+
+.education .secEdu.bg-digital .sub-tit {
+  padding-top: 21px;
+}
+
+.education .edu-digital .flex-wrap {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.edu-digital .edu-signature .eduList .list-tit::after {
+  display: none;
+}
+
+.edu-digital .edu-signature .flex-wrap .eduBox {
+  flex: 0 0 32%;
+  transition: all 0.3s;
+}
+
+.edu-digital .edu-signature .flex-wrap .eduBox:hover  {
+  background: #1f5ba2;
+  cursor: pointer;
+}
+
+.edu-digital .edu-signature .flex-wrap .eduBox:hover .list-tit {
+  color: #fff;
+}
+.edu-digital .edu-signature .flex-wrap .eduBox:hover .eduList {
+  border: 2px solid #fff;
+}
+
+.edu-digital .edu-signature .flex-wrap .eduList {
+  height: 124px;
+  padding: 15px;
+  justify-content: center;
+}
+
+.edu-digital .edu-signature .flex-wrap .list-tit {
+  line-height: 32px;
+}
+
+/*  /////////////////////////////////////////////////////////////////////////////////////////////////// 
+                  반응형
+ /////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+@media all and (max-width: 87.4375rem) {
+  .visual .vslCntBox {
+    padding: 0 1.25rem;
+  }
+
+  .visual .swiper-slide {
+    padding: 1.25rem;
+  }
+
+  .hori_Tab .tabNavi {
+    display: block;
+  }
+
+
+}
+
+@media all and (max-width: 75rem) {
+  .visual .vslCntBox .visual_area {
+    width: 85%;
+  }
+
+  .courseInfo {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .elementor-wrap .elementor-container .elementor-card a {
+    padding: 1.875rem;
+  }
+}
+
+@media all and (max-width: 56.25rem) {
+
+
+  .visual .swiper {
+    height: auto;
+  }
+
+  .visual .vslCntBox {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .visual .vslCntBox {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -0%);
+  }
+
+  .visual .vslCntBox .visual_area {
+    width: 90%;
+    left: 0;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    right: 0;
+  }
+
+  .visual .swiper-slide {
+    padding: 1.25rem;
+  }
+
+  .elementor-wrap .elementor-container {
+    flex-wrap: wrap;
+  }
+
+  .elementor-wrap .elementor-container .elementor-card a .sub_tit span {
+    display: inline-block;
+  }
+
+}
+
+@media all and (max-width: 37.5rem) {
+  .visual .vslCntBox {
+    padding: 0 1.25rem;
+  }
+
+  .visual .vslCntBox .visual_area {
+    width: 100%;
+  }
+
+  .hori_Tab .tabNavi li label {
+    margin-right: .625rem;
+    margin-bottom: .625rem;
+  }
+}
+
+*/

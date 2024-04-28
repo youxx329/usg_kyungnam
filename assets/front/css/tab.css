@@ -1,0 +1,96 @@
+/*  /////////////////////////////////////////////////////////////////////////////////////////////////// 
+                   수평 tab Area
+ /////////////////////////////////////////////////////////////////////////////////////////////////// */
+.hori_Tab>input,
+.hori_Tab section>div {
+  display: none;
+}
+
+#tab1:checked~section .tab1,
+#tab2:checked~section .tab2,
+#tab3:checked~section .tab3 {
+  display: block;
+
+  
+}
+
+#tab1:checked~nav .tab1,
+#tab2:checked~nav .tab2,
+#tab3:checked~nav .tab3 {
+  color: #222;
+}
+
+.hori_Tab {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 45px;
+}
+
+.hori_Tab .tabnaviWrap {
+  display: block;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.hori_Tab .tabNavi {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hori_Tab .tabNavi li label {
+  float: left;
+  padding: 0 25px;
+  border: 2px solid #999999;
+  background: #fff;
+  color: #999;
+  font-size: 18px;
+  font-weight: 700;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-right: 20px;
+  margin-bottom: 24px;
+}
+
+.hori_Tab .tabNavi li label:hover {
+  background: #007AF5;
+  color: #fff;
+  border: none;
+}
+
+.hori_Tab section {
+  clear: both;
+}
+
+.hori_Tab section div {
+  padding: 20px;
+  width: 100%;
+  border: 1px solid #ff0000;
+  background: #fff;
+  line-height: 24px;
+  color: #444;
+}
+
+#tab1:checked~nav .tab1 label,
+#tab2:checked~nav .tab2 label,
+#tab3:checked~nav .tab3 label {
+  background: #007AF5;
+  color: #fff;
+  position: relative;
+  border: 0;
+}
+
+
+#tab1:checked~nav .tab1 label:after,
+#tab2:checked~nav .tab2 label:after,
+#tab3:checked~nav .tab3 label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0;
+  width: 100%;
+  background: #ffffff;
+  left: 0;
+}
