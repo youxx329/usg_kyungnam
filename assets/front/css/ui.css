@@ -1040,6 +1040,10 @@ img {
   padding:3.75rem 0 3rem;
 }
 
+.subContent .education .secEdu .img-mo-platform {
+  display: none;
+}
+
 .education .secEdu .top-edutit span {
   font-weight: bold;
 }
@@ -1693,8 +1697,40 @@ img {
   .hori_Tab .tabNavi {
     display: block;
   }
+  .subContent {
+    padding: 0 .9375rem !important;
+    padding-top: 1.5625rem !important;
+
+  }
 
 
+}
+@media all and (max-width: 1230px) {
+  .education .edu-signature .eduBox .eduList {
+    padding: 1rem 0.625rem 1rem;
+    gap: 1.5rem;
+    height: 196px;
+  }
+  .edu-signature .eduBox .eduList .list-tit {
+    line-height: 2rem;
+  }
+  .edu-signature .eduBox .eduList .list-tit::after {
+    display: none;
+  }
+  .subContent .education .edu-theme .flex-wrap {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .education .edu-manage .edu-signature .eduBox .eduList {
+    height: 148px;
+  }
+  .education .edu-manage .edu-theme .themeBox .listBox {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .edu-manage .edu-theme .themeBox .listBox.listCol li{
+    width: 589px;
+  }
 }
 
 @media all and (max-width: 1200px) {
@@ -1713,12 +1749,60 @@ img {
   .subContent .education .secEdu .top-edutit {
     font-size: 2.5rem;
   }
+  .subcontent .section-fir .flex-wrap, .subcontent .section-sec .flex-wrap, .subcontent .section-thi .flex-wrap, .subcontent .section-fou .flex-wrap {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 
+  .subcontent .flex-wrap .con-tit {
+    font-size: 2.3rem;
+  }
+
+  .subcontent .flex-wrap .con-tt {
+    font-size: 1.3rem
+  }
+
+}
+@media all and (max-width: 1050px) {
+  .edu-manage .descTab .tab-content {
+    flex-direction: column;
+  }
+  .edu-manage .descTab .tab-content .con-left-wrap {
+    flex-direction: row;
+    width: auto;
+    gap: 40px;
+  }
+  .edu-manage .descTab .tab-content .con-left-wrap .top-wrap {
+    width: 500px;
+  }
+  .edu-manage .descTab .tab-content .bottom-wrap {
+    margin-top: 0.5rem;
+  }
+}
+@media all and (max-width: 999px) {
+  .education .edu-signature .flex-wrap {
+    flex-direction: column;
+  }
+  .education .edu-signature .eduBox .eduList {
+    height: auto;
+    gap: 1.1rem;
+  }
+  .education .edu-theme .themeBox .listBox {
+    flex-direction: column;
+    gap: 0.3rem;
+    align-items: start;
+  }
+  .education .edu-theme .theme-list.caps .listBox li {
+    width: 400px;
+  }
+  .education .edu-manage .edu-signature .flex-wrap {
+    flex-direction: row;
+  }
 }
 
 @media all and (max-width: 900px) {
-
-
+  
+  
   .visual .swiper {
     height: auto;
   }
@@ -1727,13 +1811,13 @@ img {
     width: 100%;
     flex-direction: column;
   }
-
+  
   .visual .vslCntBox {
     top: 0;
     left: 50%;
     transform: translate(-50%, -0%);
   }
-
+  
   .visual .vslCntBox .visual_area {
     width: 90%;
     left: 0;
@@ -1741,7 +1825,7 @@ img {
     transform: translate(0, -50%);
     right: 0;
   }
-
+  
   .visual .swiper-slide {
     padding: 1.25rem;
   }
@@ -1753,11 +1837,82 @@ img {
   .elementor-wrap .elementor-container .elementor-card a .sub_tit span {
     display: inline-block;
   }
-
-  .subContent .education .secEdu .top-edutit {
-    font-size: 2.3rem;
+  .subcontent .section-fir .flex-wrap, .subcontent .section-sec .flex-wrap, .subcontent .section-thi .flex-wrap, .subcontent .section-fou .flex-wrap {
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+    text-align: center;
   }
 
+  .subcontent .section-sec .flex-wrap, .subcontent .section-fou .flex-wrap {
+    flex-direction: column-reverse;
+  }
+  .subcontent .flex-wrap .con-tt, .subcontent .section-sec .flex-wrap {
+    font-size: 1.5rem;
+  }
+  .subContent .education .secEdu {
+    background-image: url(../임시img/img_platform_background.png);
+  }
+
+  .subContent .education .secEdu .img-platform {
+    display: none;
+  }
+  .subContent .education .secEdu .img-mo-platform {
+    display: inline-block;
+  }
+  .subContent .education .secEdu .top-edutit {
+    padding-bottom: 10px;
+    padding-top: 30px;
+    font-size: 2.2rem;
+    line-height: 3rem;
+  }
+  .subContent .education .edu-tit {
+    font-size: 2.3rem;
+  }
+  .education .edu-theme .theme-list.caps .themeBox {
+    padding: 0.75rem 0 0.75rem;
+  }
+  .subContent .education .secEdu.bg-manage .flex-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .subContent .education .secEdu.bg-manage .flex-wrap .top-edutit {
+    font-size: 2rem;
+  }
+  .edu-manage .descTab .tab-content .con-left-wrap {
+    flex-direction: column;
+  }
+  .education .edu-theme .flex-wrap .theme-list:last-child {
+    font-size: 1.3rem;
+  }
+  .edu-manage .edu-theme .themeBox .listBox.listCol li{
+    width: 300px;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .edu-manage .descTab .tab-list {
+    flex-wrap: wrap;
+  }
+  .edu-manage .descTab .tab-list li {
+    width: calc(48% - 10px);
+    text-align: center;
+  }
+}
+
+@media all and (max-width: 740px) {
+  .education .edu-theme .theme-list.caps .listBox li {
+    width: 264px;
+  }
+  .education .edu-manage .edu-signature .list-tit {
+    font-size: 1.2rem;
+  }
+  .education .edu-theme .flex-wrap .theme-list:last-child {
+    font-size: 1.2rem;
+  }
 }
 
 @media all and (max-width: 600px) {
@@ -1768,7 +1923,7 @@ img {
   .visual .vslCntBox .visual_area {
     width: 100%;
   }
-
+  
   .hori_Tab .tabNavi li label {
     margin-right: .625rem;
     margin-bottom: .625rem;
@@ -1776,5 +1931,96 @@ img {
   .education .edu-signature .flex-wrap {
     flex-direction: column;
   }
+
+  .subcontent .flex-wrap .con-tit {
+    font-size: 2.1rem;
+  }
+  .subcontent .flex-wrap .con-tt {
+    font-size: 1.1rem;
+  }
+  .subcontent .section-sec .flex-wrap .con-tit, .subcontent .section-thi .flex-wrap .con-tit {
+    line-height: 3rem;
+  }
+  
+  .subContent .education .secEdu .top-edutit {
+    font-size: 2rem;
+  }
+  .education .edu-theme .themeBox .listBox {
+    font-size: 0.9rem;
+  }
+  .education .edu-theme .flex-wrap .theme-list:last-child {
+    font-size: 1.8rem;
+  }
+  .education .edu-theme .theme-list.caps .lev-tit {
+    padding-right: 2rem;
+    display: inline;
+    padding-bottom: 10px;
+  }
+  .education .edu-theme .flex-wrap .theme-list:nth-child(4) .themeBox {
+    display: block;
+  }
+  .education .edu-theme .flex-wrap .theme-list:nth-child(4)::after {
+    display: none;
+  }
+  .education .edu-theme .theme-list.caps .lev-tit p {
+    display: inline;
+  }
+  .education .edu-theme .theme-list.caps .listBox {
+    padding-left: 15px;
+    padding-top: 5px;
+  }
+  .education .edu-theme .theme-list.caps .listBox li {
+    width: auto;
+  }
+  .education .edu-manage .edu-signature .flex-wrap {
+    flex-direction: column;
+  }
+  .education .edu-manage .edu-signature .flex-wrap .eduList {
+    height: auto;
+  }
+  .subContent .education .secEdu.bg-manage .flex-wrap .top-edutit {
+    font-size: 1.7rem;
+    line-height: 38px;
+    word-break: keep-all;
+  }
+  .subContent .education .secEdu.bg-manage .flex-wrap {
+    padding: 10px;
+  }
+  .education .edu-theme .flex-wrap .theme-list:last-child {
+    font-size: 1.1rem;
+  }
+  .education .edu-manage .edu-theme .flex-wrap .theme-list:nth-child(4) .themeBox {
+    display: flex;
+  }
 }
 
+@media all and (max-width: 520px) {
+  .education .edu-theme .flex-wrap .theme-list {
+    padding: 1rem 1rem 1rem 1.25rem;
+  }
+  .education .edu-theme .theme-list::after {
+    top: 1.5rem;
+    height: 3.5rem;
+  }
+  .education .edu-theme .themeBox .listBox {
+    padding-left: 2rem;
+  }
+  .education .edu-theme .flex-wrap .theme-list:nth-child(4) {
+    padding: 0.6rem 1rem 0.6rem 1.25rem;
+  }
+  .education .edu-theme .flex-wrap .theme-list:last-child {
+    font-size: 1rem;
+  }
+}
+@media all and (max-width: 460px) {
+  .education .edu-theme .flex-wrap .theme-list{
+    height: 104px;
+    padding: 1rem 1rem 1rem 1.25rem;
+  }
+  .education .edu-theme .flex-wrap .theme-list:last-child {
+    height: auto;
+  }
+  .education .edu-theme .flex-wrap .theme-list:last-child {
+    font-size: 0.9rem;
+  }
+}
