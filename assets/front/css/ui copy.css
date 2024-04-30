@@ -6,11 +6,11 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
 /* .subBody {
-  padding: 20px;
+  padding: 1.25rem;
 } */
 
 .subcontent .inner {
-  max-width: 1200px;
+  max-width: 75rem;
 	margin: 0 auto;
 }
 
@@ -128,6 +128,7 @@
   line-height: 3.5rem;
   font-weight: 400;
   padding:3.75rem 0 3rem;
+  word-break: keep-all;
 }
 
 .subContent .education .secEdu .img-mo-platform {
@@ -196,8 +197,9 @@
 
 .subContent .education .edu-theme {
   background: url(../images/img_theme_background.png) no-repeat center;
-  background-position: cover;
-  height: 45rem;
+  background-size: cover;
+  height: 100%;
+  padding-bottom: 4rem;
 }
 
 .subContent .education .edu-theme .flex-wrap {
@@ -206,8 +208,8 @@
 }
 
 .education .edu-theme .flex-wrap .theme-list {
-  box-shadow: 2px 2px 10px #00000029;
-  border-radius: 16px;
+  box-shadow: 0.125rem 0.125rem 0.625rem #00000029;
+  border-radius: 1rem;
   opacity: 1;
   background: #fff;
   padding: 0.25rem 0 0.25rem 1.25rem;
@@ -276,19 +278,19 @@
 }
 
 .education .edu-theme .flex-wrap .theme-list {
-  border-left: 16px solid #c8e4ff;
+  border-left: 1rem solid #c8e4ff;
 }
 
 .education .edu-theme .flex-wrap .theme-list:nth-child(2) {
-  border-left: 16px solid #8ec7ff;
+  border-left: 1rem solid #8ec7ff;
 }
 
 .education .edu-theme .flex-wrap .theme-list:nth-child(3) {
-  border-left: 16px solid #4ba7ff;
+  border-left: 1rem solid #4ba7ff;
 }
 
 .education .edu-theme .flex-wrap .theme-list:nth-child(4) {
-  border-left: 16px solid #0886FF;
+  border-left: 1rem solid #0886FF;
 }
 
 .education .edu-theme .flex-wrap .theme-list:last-child {
@@ -297,12 +299,13 @@
   line-height: 2.375rem;
   color: #fff;
   background: transparent linear-gradient(94deg,#3ec4ff 0%,#008da9 100%) 0% 0% no-repeat padding-box;
-  box-shadow: 0.125rem 0.125rem 0.625rem #00000029;
-  border-radius: 16px;
+  box-shadow: 2px 2px 10px #00000029;
+  border-radius: 1rem;
   opacity: 1;
   padding: 1.3125rem 0;
   text-align: center;
   border-left: none;
+  word-break: keep-all;
 }
 
 .education .edu-theme .flex-wrap .theme-list:last-child::after {
@@ -331,12 +334,12 @@
 }
 
 .education .edu-theme .theme-list.caps .lev-tit p {
-  line-height: 26px;
-  font-size: 24px;
+  line-height: 1.625rem;
+  font-size: 1.5rem;
 }
 
 .education .edu-theme .theme-list.caps .themeBox {
-  padding: 0.75rem 0 0.75rem;
+  padding: 12px 0 12px;
 }
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////// 
@@ -408,7 +411,7 @@
 .edu-manage .descTab .tab-list {
   display: flex;
   gap: 1rem;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 0.0625rem solid #ddd;
   padding-bottom: 1rem;
 }
 
@@ -417,7 +420,7 @@
   font-weight: bold;
   line-height: 1.625rem;
   color: #999999;
-  border: 2px solid #999999;
+  border: 0.125rem solid #999999;
   border-radius: 1.875rem;
   padding: 0.625rem 0.875rem;
   transition: all 0.2s;
@@ -467,7 +470,7 @@
   background: #113e62;
   padding: 0.3125rem 1.0625rem;
   color: #fff;
-  border-radius: 30px;
+  border-radius: 1.875rem;
   font-size: 1rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
@@ -518,7 +521,7 @@
 }
 
 .edu-manage .desc-table {
-  border-bottom: 2px solid #b2ddff;
+  border-bottom: 0.125rem solid #b2ddff;
   border-right: none !important;
   color: #222222;
   text-align: center;
@@ -543,8 +546,8 @@
   line-height: 1.1875rem;
   color: #222222;
   background: #f5f5f5;
-  border-right: 1px solid #bbbbbb;
-  border-bottom: 1px solid #bbbbbb;
+  border-right: 0.0625rem solid #bbbbbb;
+  border-bottom: 0.0625rem solid #bbbbbb;
 }
 
 .edu-manage .desc-table .tdBlue, .edu-manage .desc-table .tdBlack{
@@ -557,33 +560,33 @@
 
 .edu-manage .desc-table .tdBlue {
   color:#00428e;
-  border-right: 1px solid #bbbbbb;
+  border-right: 0.0625rem solid #bbbbbb;
 }
 
 .edu-manage .desc-table .tdBlack {
   color: #222222;
-  border-right: 1px solid #bbbbbb;
+  border-right: 0.0625rem solid #bbbbbb;
 }
 
 .edu-manage .desc-table .bgBlue {
   background: #D6edff;
   opacity: 1;
-  border-right: 1px solid #bbbbbb;
+  border-right: 0.0625rem solid #bbbbbb;
 }
 
 .edu-manage .desc-table .bgOrg {
   background: #fff8e9;
-  border-right: 1px solid #bbbbbb;
+  border-right: 0.0625rem solid #bbbbbb;
 }
 
 .edu-manage .desc-table .bgGrn {
   background: #efffe6;
-  border-right: 1px solid #bbbbbb;
+  border-right: 0.0625rem solid #bbbbbb;
 }
 
 .edu-manage .desc-table td:last-child {
   border-right: transparent;
-  border-left: 1px solid #bbbbbb;
+  border-left: 0.0625rem solid #bbbbbb;
 }
 
 .edu-manage .desc-table th:last-child {
@@ -601,7 +604,7 @@
 }
 
 .education .secEdu.bg-digital .sub-tit {
-  padding-top: 1.3125rem;
+  padding-top: 21px;
 }
 
 .education .edu-digital .flex-wrap {
@@ -636,17 +639,17 @@
   color: #fff;
 }
 .edu-digital .edu-signature .flex-wrap .eduBox:hover .eduList {
-  border: 0.125rem solid #fff;
+  border: 2px solid #fff;
 }
 
 .edu-digital .edu-signature .flex-wrap .eduList {
-  height: 7.75rem;
-  padding: 0.9375rem;
+  height: 124px;
+  padding: 15px;
   justify-content: center;
 }
 
 .edu-digital .edu-signature .flex-wrap .list-tit {
-  line-height: 2rem;
+  line-height: 32px;
 }
 
 .education .edu-signature .eduBox .eduList.greenLine {
@@ -676,17 +679,17 @@
 }
 
 .edu-digital-details .details-wrap .menu-list {
-  width: 17.625rem;
+  width: 282px;
 }
 
 .edu-digital-details .details-wrap .menu-list li {
-  border-bottom: 1px solid #dddddd;
-  border-left: 1px solid #dddddd;
-  border-right: 1px solid #dddddd;
+  border-bottom: 0.0625rem solid #dddddd;
+  border-left: 0.0625rem solid #dddddd;
+  border-right: 0.0625rem solid #dddddd;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 3.75rem;
+  height: 60px;
   padding: 0;
 }
 
@@ -696,8 +699,8 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  padding: 0.9375rem;
-  line-height: 1.375rem;
+  padding: 15px;
+  line-height: 22px;
 }
 
 .edu-digital-details .details-wrap .menu-list li:hover {
@@ -710,8 +713,8 @@
 }
 
 .edu-digital-details .details-wrap .menu-list li:first-child {
-  height: 4.8125rem;
-  font-size: 1.5rem;
+  height: 77px;
+  font-size: 24px;
   font-weight: bold;
   pointer-events: none;
   color: #113e62;
@@ -720,64 +723,64 @@
 }
 
 .edu-digital-details .details-wrap .left-wrap {
-  width: 17.625rem;
+  width: 282px;
 }
 
 .edu-digital-details .details-wrap .right-wrap {
-  padding: 2.5rem 0 0 1.5rem;
+  padding: 40px 0 0 24px;
   width: 100%;
 }
 
 .edu-digital-details .right-wrap .right-tit {
-  font-size: 2rem;
+  font-size: 32px;
   font-weight: bold;
-  line-height: 2.375rem;
+  line-height: 38px;
   color: #222222;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid #113e62;
+  padding-bottom: 8px;
+  border-bottom: 0.125rem solid #113e62;
 } 
 
 .edu-digital-details .right-wrap .edu-char-wrap {
-  margin-top: 2.5rem;
+  margin-top: 40px;
 }
 
 .edu-digital-details .right-wrap .con-tit {
-  font-size: 1.5rem;
-  line-height: 1.8125rem;
+  font-size: 24px;
+  line-height: 29px;
   font-weight: bold;
   color: #222222;
-  padding-bottom: 0.5rem;
-  padding-left: 1rem;
-  border-bottom: 1px solid #dddddd;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  border-bottom: 0.0625rem solid #dddddd;
 }
 
 .edu-digital-details .right-wrap .edu-char-wrap .char-list {
-  padding: 1rem 0 2.5rem 1.5rem;
-  line-height: 1.5rem;
+  padding: 16px 0 40px 24px;
+  line-height: 24px;
 }
 
 .edu-digital-details .right-wrap .edu-loadmap-wrap .loadmap-list {
-  padding: 1.5rem 0 0 1rem;
-  flex: 1 1 calc(50% - 0.625rem);
+  padding: 24px 0 0 16px;
+  flex: 1 1 calc(50% - 10px);
   word-break: keep-all;
 }
 
 .edu-digital-details .right-wrap .edu-loadmap-wrap .flex-wrap {
   flex-wrap: wrap;
   display: flex;
-  gap: 0.75rem;
+  gap: 12px;
 }
 
 .edu-digital-details .edu-loadmap-wrap .loadmap-list .stapBox {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 8px;
 }
 
 .edu-digital-details .loadmap-list .stapBox .step-tit {
-  font-size: 1.25rem;
+  font-size: 20px;
   font-weight: bold;
-  line-height: 1.5rem;
+  line-height: 24px;
   color: #222222;
 }
 
@@ -786,16 +789,20 @@
 }
 
 .edu-digital-details .loadmap-list .step-txt {
-  padding: 1rem 0 0 0.5rem;
-  line-height: 1.5rem;
+  padding: 16px 0 0 8px;
+  line-height: 24px;
 }
 
 .edu-digital-details .loadmap-list .step-txt .step-gap {
-  padding-left: 0.625rem;
+  padding-left: 10px;
 }
 
 .edu-digital-details .loadmap-list .step-tit.step-siz {
-  font-size: 1.125rem;
+  font-size: 18px;
+}
+
+.education .edu-manage .edu-desc .edu-tit {
+  word-break: keep-all;
 }
 
 
@@ -805,25 +812,25 @@
 
 @media all and (max-width: 1399px) {
   .subContent {
-    /* padding: 0 .9375rem !important; */
-    padding-top: 1.5625rem !important;
+    /* padding: 0 15px !important; */
+    padding-top: 25px !important;
     
   }
   .edu-signature  {
-    padding: 0 20px;
+    padding: 0 1.25rem;
   }
 
   .edu-theme {
-    padding: 0 20px;
+    padding: 0 1.25rem;
   }
   .edu-desc {
-    padding: 0 20px;
+    padding: 0 1.25rem;
   }
   .edu-digital .edu-signature .flex-wrap .eduBox {
     flex: 1 0 48%;
   }
   .edu-digital-details .details-wrap {
-    padding: 0 20px;
+    padding: 0 1.25rem;
   }
 }
 @media all and (max-width: 1250px) {
@@ -840,7 +847,7 @@
   .education .edu-signature .eduBox .eduList {
     padding: 1rem 0.625rem 1rem;
     gap: 1.5rem;
-    height: 196px;
+    height: 12.25rem;
   }
   .edu-signature .eduBox .eduList .list-tit {
     line-height: 2rem;
@@ -849,28 +856,40 @@
     display: none;
   }
   .subContent .education .edu-theme .flex-wrap {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
   }
   .education .edu-manage .edu-signature .eduBox .eduList {
-    height: 148px;
+    height: 9.25rem;
   }
   .education .edu-manage .edu-theme .themeBox .listBox {
     flex-direction: column;
     gap: 0.3rem;
   }
   .edu-manage .edu-theme .themeBox .listBox.listCol li{
-    width: 589px;
+    width: 36.8125rem;
   }
 }
 
 @media all and (max-width: 1200px) {
+  .visual .vslCntBox .visual_area {
+    width: 85%;
+  }
+
+  .courseInfo {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .elementor-wrap .elementor-container .elementor-card a {
+    padding: 1.875rem;
+  }
+
   .subContent .education .secEdu .top-edutit {
     font-size: 2.5rem;
   }
   .subcontent .section-fir .flex-wrap, .subcontent .section-sec .flex-wrap, .subcontent .section-thi .flex-wrap, .subcontent .section-fou .flex-wrap {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
   }
 
   .subcontent .flex-wrap .con-tit {
@@ -889,10 +908,10 @@
   .edu-manage .descTab .tab-content .con-left-wrap {
     flex-direction: row;
     width: auto;
-    gap: 40px;
+    gap: 2.5rem;
   }
   .edu-manage .descTab .tab-content .con-left-wrap .top-wrap {
-    width: 500px;
+    width: 31.25rem;
   }
   .edu-manage .descTab .tab-content .bottom-wrap {
     margin-top: 0.5rem;
@@ -903,23 +922,23 @@
   .education .edu-digital-details .mobile-sub-menu {
     display: block;
     width: 100%;
-    height: 48px;
-    top: 105px;
+    height: 3rem;
+    top: 6.5625rem;
     background: #eee;
     border: none;
-    border-bottom: 1px solid #8d8d8d;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px;
+    border-bottom: 0.0625rem solid #8d8d8d;
+    border-top: 0.0625rem solid #8d8d8d;
     cursor: pointer;
     z-index: 10;
-    padding: 0 15px;
+    padding: 0 0.9375rem;
+    margin-top: 2.8125rem;
   }
   .edu-digital-details .details-wrap {
     flex-direction: column;
   }
   .edu-digital-details .details-wrap .right-wrap {
-    padding: 15px 0 40px 0;
-
-}
+    padding: 0.9375rem 0 2.5rem 0;
+  }
 }
 @media all and (max-width: 999px) {
   .education .edu-signature .flex-wrap {
@@ -935,7 +954,7 @@
     align-items: start;
   }
   .education .edu-theme .theme-list.caps .listBox li {
-    width: 400px;
+    width: 25rem;
   }
   .education .edu-manage .edu-signature .flex-wrap {
     flex-direction: row;
@@ -944,17 +963,44 @@
 
 @media all and (max-width: 915px) {
   .edu-manage .edu-theme .themeBox .listBox.listCol li{
-    width: 500px;
+    width: 31.25rem;
   }
   .education .edu-theme .theme-list::after  {
     display: none;
   }
   .education .edu-theme .themeBox .listBox{
-    padding-left: 10px;
+    padding-left: 0.625rem;
   }
 }
 
 @media all and (max-width: 900px) {
+  .visual .swiper {
+    height: auto;
+  }
+
+  .visual .vslCntBox {
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .visual .vslCntBox {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -0%);
+  }
+  
+  .visual .vslCntBox .visual_area {
+    width: 90%;
+    left: 0;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    right: 0;
+  }
+  
+  .visual .swiper-slide {
+    padding: 1.25rem;
+  }
+
   .elementor-wrap .elementor-container {
     flex-wrap: wrap;
   }
@@ -965,7 +1011,7 @@
   .subcontent .section-fir .flex-wrap, .subcontent .section-sec .flex-wrap, .subcontent .section-thi .flex-wrap, .subcontent .section-fou .flex-wrap {
     flex-direction: column;
     align-items: center;
-    gap: 5rem;
+    gap: 80px;
     text-align: center;
   }
 
@@ -986,8 +1032,8 @@
     display: inline-block;
   }
   .subContent .education .secEdu .top-edutit {
-    padding-bottom: 10px;
-    padding-top: 30px;
+    padding-bottom: 0.625rem;
+    padding-top: 1.875rem;
     font-size: 2.2rem;
     line-height: 3rem;
   }
@@ -1002,7 +1048,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.25rem;
   }
   .subContent .education .secEdu.bg-manage .flex-wrap .top-edutit {
     font-size: 2rem;
@@ -1018,7 +1064,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.25rem;
   }
 }
 
@@ -1029,7 +1075,7 @@
   .education .edu-manage .edu-theme .themeBox .lev-tit {
     flex-direction: row;
     justify-content: start;
-    padding-bottom: 5px;
+    padding-bottom: 0.3125rem;
   }
   .education .edu-manage .edu-theme .themeBox .lev-tit span  {
     font-size: 1.5rem;
@@ -1037,7 +1083,7 @@
     width: 2.5rem;
   }
   .education .edu-manage .edu-theme .themeBox .listBox {
-    padding-bottom: 10px;
+    padding-bottom: 0.625rem;
   }
   .edu-manage .edu-theme .themeBox .listBox.listCol li {
     width: auto;
@@ -1046,16 +1092,16 @@
     background: none;
   }
   .education .edu-manage .edu-desc .edu-tit.height {
-    margin-top: 110px;
+    margin-top: 2.875rem;
   }
   .education .subcontent.edu-manage .edu-theme {
-    background: none;
+    /* background: none; */
   }
 }
 
 @media all and (max-width: 800px) {
   .edu-manage .desc-table .con-pading {
-    padding: 2px;
+    padding: 0.125rem;
     word-break: keep-all;
   }
 }
@@ -1063,7 +1109,7 @@
 
 @media all and (max-width: 740px) {
   .education .edu-theme .theme-list.caps .listBox li {
-    width: 264px;
+    width: 16.5rem;
   }
   .education .edu-manage .edu-signature .list-tit {
     font-size: 1.2rem;
@@ -1078,7 +1124,7 @@
     flex-wrap: wrap;
   }
   .edu-manage .descTab .tab-list li {
-    width: calc(48% - 10px);
+    width: calc(48% - 0.625rem);
     text-align: center;
   }
   .edu-digital-details .right-wrap .edu-loadmap-wrap .loadmap-list {
@@ -1088,6 +1134,18 @@
 
 
 @media all and (max-width: 600px) {
+  .visual .vslCntBox {
+    padding: 0 1.25rem;
+  }
+
+  .visual .vslCntBox .visual_area {
+    width: 100%;
+  }
+  
+  .hori_Tab .tabNavi li label {
+    margin-right: 0.625rem;
+    margin-bottom: 0.625rem;
+  }
   .education .edu-signature .flex-wrap {
     flex-direction: column;
   }
@@ -1114,7 +1172,7 @@
   .education .edu-theme .theme-list.caps .lev-tit {
     padding-right: 2rem;
     display: inline;
-    padding-bottom: 10px;
+    padding-bottom: 0.625rem;
   }
   .education .edu-theme .flex-wrap .theme-list:nth-child(4) .themeBox {
     display: block;
@@ -1126,8 +1184,8 @@
     display: inline;
   }
   .education .edu-theme .theme-list.caps .listBox {
-    padding-left: 15px;
-    padding-top: 5px;
+    padding-left: 0.9375rem;
+    padding-top: 0.3125rem;
   }
   .education .edu-theme .theme-list.caps .listBox li {
     width: auto;
@@ -1140,17 +1198,27 @@
   }
   .subContent .education .secEdu.bg-manage .flex-wrap .top-edutit {
     font-size: 1.7rem;
-    line-height: 38px;
+    line-height: 2.375rem;
     word-break: keep-all;
   }
   .subContent .education .secEdu.bg-manage .flex-wrap {
-    padding: 10px;
+    padding: 0.625rem;
   }
   .education .edu-theme .flex-wrap .theme-list:last-child {
     font-size: 1.1rem;
   }
   .education .edu-manage .edu-theme .flex-wrap .theme-list:nth-child(4) .themeBox {
     display: block;
+  }
+  .subContent .education .edu-platform .secEdu .flex-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .subContent .education .edu-platform .secEdu .flex-wrap img {
+    width: 75%;
   }
 }
 
@@ -1172,7 +1240,7 @@
     font-size: 1rem;
   }
   .education .edu-manage .edu-desc .edu-tit.height {
-    margin-top: 240px;
+    /* margin-top: 15rem; */
   }
   .edu-manage .descTab .tab-content .con-left-wrap .top-wrap {
     width: auto;
@@ -1180,10 +1248,17 @@
   .education .edu-platform .edu-theme .themeBox .lev-tit {
     padding-right: 0;
   }
+  .subContent .education .secEdu .sub-tit {
+    font-size: 1.3rem;
+  }
+  .subContent .education .secEdu .flex-wrap .top-edutit {
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+  }
+  
 }
 @media all and (max-width: 460px) {
   .education .edu-theme .flex-wrap .theme-list{
-    height: 104px;
     padding: 1rem 1rem 1rem 1.25rem;
   }
   .education .edu-theme .flex-wrap .theme-list:last-child {
@@ -1192,4 +1267,10 @@
   .education .edu-theme .flex-wrap .theme-list:last-child {
     font-size: 0.9rem;
   }
+}
+
+@media all and (max-width: 443px) {
+  .edu-manage .descTab .tab-list .tab-button {
+    font-size: 1rem;
+  }  
 }
