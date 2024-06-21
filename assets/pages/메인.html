@@ -10,20 +10,90 @@
   <link rel="stylesheet" href="../front/css/ui.css" />
   <link rel="stylesheet" href="../front/css/gnbMenu2.css" />
   <link rel="stylesheet" href="../front/css/swiper-bundle.min.css" />
-
-
+  <link rel="stylesheet" type="text/css" href='https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'>
 
   <script src="../front/js/jquery-3.6.0.min.js"></script>
   <script src="../front/js/jquert-ui.js"></script>
   <script src="../front/js/newFile.js"></script>
   <script src="../front/js/index.js"></script>
   <script src="../front/js/swiper.js"></script>
+  <script src="../front/js/slick.min.js"></script>
+
+  <!--   테스트 중 -->
+  <link rel="stylesheet" href="../front/css/tabSwiper.css" />
+  <link rel="stylesheet" href="../front/css/slick.css" />
+  <script src="../front/js/slick.min.js"></script>
+
+  <!--slick slider 필요 태그 st-->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css">
+
+<!-- <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+<!-- slick Carousel CDN -->
+<!-- <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js"></script> -->
+
+<link rel="stylesheet" href="../front/css/cardSlider.css" />
+
+<script>
+  let el;
+  let slickNext;
+  $(document).ready(function(){
+  $('.datalist').slick({
+    centerMode: false,
+    // centerPadding: '50px',
+    slidesToShow: 2,
+    slidesToScroll: 1, 
+    // initialSlide: -2,
+    speed: 600,
+    infinite: false,
+    // autoplay: true,
+    // autoplaySpeed: 500,
+    // fade: true,   
+    // slidesToShow: 1, //한번에 보여줄 슬라이드 갯수
+    // slidesToScroll: 1, //한번에 넘겨지는 슬라이드 갯수
+    // arrows: true, //넘기기 버튼 화살표 여부
+    // dots:true, //네비게이션 버튼 dot유형
+    // asNavFor: '.terms-nav', //함께 움직이는 슬라이드 메뉴영역
+    // infinite: false, //무한반복 옵션
+    // adaptiveHeight: true, // 슬라이더 높이를 현재 슬라이드에 맞춤
+    // draggable:true //드래그 가능여부
+
+    responsive: [
+{
+  breakpoint: 768,
+  settings: {
+    arrows: false,
+    centerMode: true,
+    centerPadding: '40px',
+    slidesToShow: 3
+  }
+},
+{
+  breakpoint: 480,
+  settings: {
+    arrows: false,
+    centerMode: true,
+    centerPadding: '40px',
+    slidesToShow: 1
+  }
+}
+]
+  });
+  el = document.querySelector('.slick-slide:last-child');
+  slickNext = document.querySelector('.lectureWrap .slick-next');
+  // slickNext.addEventListener('click', el.classList.add('slick-active'))
+  el.classList.add("last-slide");
+});
+
+</script>
+
 
 </head>
 
 <body>
   <div class="wrap">
-    <div class="header">
+    <div class="header mo_header">
       <div class="headerInner">
         <div class="util">
           <div class="logo">
@@ -32,26 +102,43 @@
           <div class="util_right">
             <ul class="nav_item">
               <li class="mlf20"><a href="" class="btn_login"> 로그인</a></li>
-              <li class="mlf20"><a href="" class="btn_join ">회원가입</a></li>
+              <li class="mlf20"><a href="" class="btn_join">회원가입</a></li>
+              <div class="dropdown">
+                <a class="dropbtn"><span>USG운영자1님</span></a>
+                <div class="dropdown-list">
+                  <a href="#">PCMS 관리</a>
+                  <a href="#">개인정보수정</a>
+                  <a href="#">로그아웃</a>
+                </div>
+              </div>
             </ul>
+
           </div>
         </div>
         <div class="naviWrap">
-
-          <nav>
+          <nav class="mo_naviWrap">
             <div class="nav-mobile"><a id="nav-toggle" href="#"><span></span></a></div>
             <div class="inner">
               <ul>
-                <div id="popup-overlay" class="nav-list">
+                <div id="" class="nav-list ">
+                  <!-- <div id="" class="nav-list"> -->
+                  <div class="memberWrap">
+                    <a href="#">
+                      <div class="memberArea">
+                        <div class="member_box login">login</div>
+                        <div class="member_box join">회원가입</div>
+                      </div>
+                    </a>
+                  </div>
                   <li class="mobileNavItem">
-                    <a href="../pages/about.html">About</a>
+                    <a href="#">About</a>
                   </li>
                   <li class="mobileNavItem">
                     <a href="#">교육과정</a>
                   </li>
                   <li class="mobileNavItem">
                     <a href="#">강좌소개</a>
-                    <ul class="nav-dropdown">
+                    <ul class="nav-dropdown mo_nav-dropdown">
                       <li>
                         <a href="#">Web Design</a>
                       </li>
@@ -63,19 +150,18 @@
                       </li>
                     </ul>
                   </li>
-                  <li>
+                  <li class="mobileNavItem">
                     <a href="#">교수소개</a>
                   </li>
-                  <li>
+                  <li class="mobileNavItem">
                     <a href="#">나의 강의실</a>
-
                   </li>
-                  <li>
+                  <li class="mobileNavItem">
                     <a href="#">캠퍼스 소식</a>
                   </li>
-                  <li>
+                  <li class="mobileNavItem">
                     <a href="#">공지사항</a>
-                    <ul class="nav-dropdown">
+                    <ul class="nav-dropdown mo_nav-dropdown">
                       <li>
                         <a href="#"> 교육생 모집안내</a>
                       </li>
@@ -90,17 +176,18 @@
                       </li>
                     </ul>
                   </li>
-
+                  <li>
+                    <a href="#" title="사이트맵"><img src="../front/images/menu.svg" alt="사이트맵" class="sitemap"><span class="site_span"> 사이트맵 </span></a>
+                  </li>
                 </div>
               </ul>
             </div>
           </nav>
-
         </div>
       </div>
     </div>
 
-    <div class="contents">
+    <div class="contents mo_contents">
       <section class="visual">
         <!-- Slider main container -->
         <div class="swiper">
@@ -126,7 +213,8 @@
                 <div class="">
                   <img class="img_float" src="../front/images/img_banner02.png" alt="boy">
                   <div class="visual_area">
-                    <h3 data-swiper-parallax="-5000">AWS(아마존웹서비스) 와 MS(마이크로소프트)사 국제공인자격증 교육과정을 무료로 듣고 자격증을 취득할 수 있는 경남 유일의 코딩 교육 캠퍼스</h3>
+                    <h4 data-swiper-parallax="-5000">AWS(아마존웹서비스) 와 MS(마이크로소프트)사 국제공인자격증 교육과정을 <p>무료로 듣고 자격증을 취득할 수 있는 경남 유일의 코딩 교육 캠퍼스</p>
+                    </h4>
 
                     <h2 data-swiper-parallax="-4000">USG코딩오픈메타캠퍼스</h2>
                   </div>
@@ -152,8 +240,8 @@
           <!-- <div class="swiper-pagination"></div> -->
 
 
-          <!-- <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"><img class="imgtest" src="../front/images/arrow_left-wt.svg"></div>
+          <div class="swiper-button-next"><img src="../front/images/arrow_right_wt.svg"></div>
 
 
           <div class="swiper_controller">
@@ -170,49 +258,125 @@
               </div>
             </div>
           </div>
-        </div> -->
+        </div>
       </section>
       <!--  강좌소개  -->
-      <section class="courseInfo">
-        <div class="courseInfoWrap">
-          <div class="titWrap">
-            <div class="titArea">
-              <h1 class="title_lg">강좌<span>소개</span></h1>
-              <a href="#" class="txt_total">전체보기</a>
+      <section class="courseInfo lectureWrap edu-desc">
+            <div class="titWrap">
+              <div class="titArea">
+                <h1 class="title_lg">강좌<span>소개</span></h1>
+                <a href="#" class="txt_total">전체보기</a>
+              </div>
             </div>
-          </div>
-          <div class="hori_Tab">
-            <input checked="checked" id="tab1" type="radio" name="pct" />
-            <input id="tab2" type="radio" name="pct" />
-            <input id="tab3" type="radio" name="pct" />
-            <nav class="tabnaviWrap">
-              <ul class="tabNavi">
-                <li class="tab1 ">
-                  <label for="tab1">플랫폼 비즈니스</label>
-                </li>
-                <li class="tab2">
-                  <label for="tab2">첨단제조업(Smart Factory)</label>
-                </li>
-                <li class="tab3">
-                  <label for="tab3">산업 디지털 트윈</label>
-                </li>
+            <div class="descTab">
+              <ul class="tab-list">
+                <li class="tab-button on" data-id="0">플랫폼 비즈니스</li>
+                <li class="tab-button" data-id="1">산업디지털트윈</li>
+                <li class="tab-button" data-id="2">첨단제조업</li>
               </ul>
-            </nav>
-            <section>
-              <div class="tab1">
-                <h2>First</h2>
-                swiper ared
+            </div>
+         
+          <div class="tabs1cont tab-content-wrap show">
+            <!-- tabs1pane0 -->
+            <div class="datalist tab-content">
+              <div class="class1">
+                <div class="card-wrap">
+                  <div class="card-img">
+                    <img src="../front/images/img_con_01.jpg" alt="">
+                  </div>
+                  <div class="card-con">
+                    <span class="card-sub-tit">플랫폼 비즈니스</span>
+                    <h4 class="card-tit">조선해양DX 기술 교육 과정(1) BIG Data(심화)</h4>
+                    <p>신청기간 : 2023.12.01 ~ 2024.01.31</p>
+                    <p>수강기간 : 2023.12.01 ~ 2024.01.31</p>
+                    <p>교수자 : cateacher1, cateacher2, IGM강사, 손청하</p>
+                  </div>
+                </div>
               </div>
-              <div class="tab2">
-                <h2>Second</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum nesciunt ipsum dolore error repellendus officiis aliquid a, vitae reprehenderit, accusantium vero, ad. Obcaecati numquam sapiente cupiditate. Praesentium eaque, quae error!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, maiores.</p>
+              <div class="class2">
+                <div class="card-wrap">
+                  <div class="card-img">
+                    <img src="../front/images/img_con_02.jpg" alt="">
+                  </div>
+                  <div class="card-con">
+                    <span class="card-sub-tit">플랫폼 비즈니스</span>
+                    <h4 class="card-tit">조선해양DX 기술 교육 과정(2) BIG Data(심화)</h4>
+                    <p>신청기간 : 2023.12.01 ~ 2024.01.31</p>
+                    <p>수강기간 : 2023.12.01 ~ 2024.01.31</p>
+                    <p>교수자 : cateacher1, cateacher2, IGM강사, 손청하</p>
+                  </div>
+                </div>
               </div>
-              <div class="tab3">
-                <h2>Third</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, nobis culpa rem, vitae earum aliquid.</p>
+              <div class="class3">
+                <div class="card-wrap">
+                  <div class="card-img">
+                    <img src="../front/images/img_con_03.jpg" alt="">
+                  </div>
+                  <div class="card-con">
+                    <span class="card-sub-tit">플랫폼 비즈니스</span>
+                    <h4 class="card-tit">조선해양DX 기술 교육 과정(3) BIG Data(심화)</h4>
+                    <p>신청기간 : 2023.12.01 ~ 2024.01.31</p>
+                    <p>수강기간 : 2023.12.01 ~ 2024.01.31</p>
+                    <p>교수자 : cateacher1, cateacher2, IGM강사, 손청하</p>
+                  </div>
+                </div>
               </div>
-            </section>
+              <div class="class4">
+                <div class="card-wrap">
+                  <div class="card-img">
+                    <img src="../front/images/img_con_01.jpg" alt="">
+                  </div>
+                  <div class="card-con">
+                    <span class="card-sub-tit">플랫폼 비즈니스</span>
+                    <h4 class="card-tit">조선해양DX 기술 교육 과정(4) BIG Data(심화)</h4>
+                    <p>신청기간 : 2023.12.01 ~ 2024.01.31</p>
+                    <p>수강기간 : 2023.12.01 ~ 2024.01.31</p>
+                    <p>교수자 : cateacher1, cateacher2, IGM강사, 손청하</p>
+                  </div>
+                </div>
+              </div>
+              <div class="class5">
+                <div class="card-wrap">
+                  <div class="card-img">
+                    <img src="../front/images/img_con_02.jpg" alt="">
+                  </div>
+                  <div class="card-con">
+                    <span class="card-sub-tit">플랫폼 비즈니스</span>
+                    <h4 class="card-tit">조선해양DX 기술 교육 과정(5) BIG Data(심화)</h4>
+                    <p>신청기간 : 2023.12.01 ~ 2024.01.31</p>
+                    <p>수강기간 : 2023.12.01 ~ 2024.01.31</p>
+                    <p>교수자 : cateacher1, cateacher2, IGM강사, 손청하</p>
+                  </div>
+                </div>
+              </div>
+              <div class="class6">
+                <div class="card-wrap">
+                  <div class="card-img">
+                    <img src="../front/images/img_con_03.jpg" alt="">
+                  </div>
+                  <div class="card-con">
+                    <span class="card-sub-tit">플랫폼 비즈니스</span>
+                    <h4 class="card-tit">조선해양DX 기술 교육 과정(6) BIG Data(심화)</h4>
+                    <p>신청기간 : 2023.12.01 ~ 2024.01.31</p>
+                    <p>수강기간 : 2023.12.01 ~ 2024.01.31</p>
+                    <p>교수자 : cateacher1, cateacher2, IGM강사, 손청하</p>
+                  </div>
+                </div>
+              </div>
+              <div class="class7">
+                <div class="card-wrap">
+                  <div class="card-img">
+                    <img src="../front/images/img_con_03.jpg" alt="">
+                  </div>
+                  <div class="card-con">
+                    <span class="card-sub-tit">플랫폼 비즈니스</span>
+                    <h4 class="card-tit">조선해양DX 기술 교육 과정(7) BIG Data(심화)</h4>
+                    <p>신청기간 : 2023.12.01 ~ 2024.01.31</p>
+                    <p>수강기간 : 2023.12.01 ~ 2024.01.31</p>
+                    <p>교수자 : cateacher1, cateacher2, IGM강사, 손청하</p>
+                  </div>
+                </div>
+              </div>
           </div>
       </section>
 
@@ -222,7 +386,7 @@
         <div class="trainingWrap">
           <div class="titWrap">
             <div class="titArea">
-              <h1 class="title_lg">강좌<span>소개</span></h1>
+              <h1 class="title_lg">교육 과정 <span>소개</span></h1>
               <a href="#" class="txt_total">전체보기</a>
             </div>
           </div>
@@ -230,23 +394,23 @@
           <div class="elementor-wrap">
             <ul class="elementor-container">
               <li class="elementor-card">
-                <a href="#" class="img01">
+                <a href="#" class="img01 on">
                   <h2 class="head_tit">플랫폼 비즈니스</h2>
-                  <img src="../front/images/img01.png" alt="img01" class="mt24">
+                  <img src="../front/images/img_default_01.png" alt="img01 " class="mt24">
                   <p class="sub_tit"><span>현직에 있는 실무자들이 멘토가</span> <span> 되어 하나의 프로젝트를</span><span>같이 수행하며 노하우를</span><span>전수해 드립니다.</span> </p>
                 </a>
               </li>
               <li class="elementor-card">
                 <a href="#" class="img02">
                   <h2 class="head_tit">첨단 제조업</h2>
-                  <img src="../front/images/img02.png" alt="img02" class="mt24">
+                  <img src="../front/images/img_default_02.png" alt="img02" class="mt24">
                   <p class="sub_tit"><span>실무 현장에서 실제로 사용하는</span> <span> CI/CD 실습환경을 제공하여 </span><span>프로젝트 프로세스를</span><span>직접 경험할 수 있습니다.</span> </p>
                 </a>
               </li>
               <li class="elementor-card">
                 <a href="#" class="img03">
                   <h2 class="head_tit">산업 디지털 트윈</h2>
-                  <img src="../front/images/img03.png" alt="img03" class="mt24">
+                  <img src="../front/images/img_default_03.png" alt="img03" class="mt24">
                   <p class="sub_tit"><span>현직에 있는 실무자들이</span> <span>멘토가 되어 하나의 프로젝트를</span><span>같이 수행하며 노하우를</span><span>전수해 드립니다.</span> </p>
                 </a>
               </li>
@@ -261,63 +425,151 @@
         <div class="trainingWrap">
           <div class="titWrap">
             <div class="titArea">
-              <h1 class="title_lg">공지<span>사항</span></h1>
+              <h1 class="title_lg">강좌<span>소개</span></h1>
               <a href="#" class="txt_total">전체보기</a>
             </div>
           </div>
-        </div>
-
-          <div class="innWrap subTab01 ">
-          
+          <div class="innWrapA subTab01 ">
             <div class="flex">
               <div class="nav">
                 <ul>
-                  <li><a href="#tab01">검색으로 찾기</a></li>
-                  <li><a href="#tab02">카테고리로 찾기</a></li>
+                  <li><a href="#tab01" class="tit_test">교육생 모집안내</a></li>
+                  <li><a href="#tab02">플랫폼 비즈니스 과정</a></li>
+                  <li><a href="#tab03" class="tit_test">산업 디지털트윈 과정</a></li>
+                  <li><a href="#tab04">첨단 제조업 과정</a></li>
                 </ul>
               </div>
               <div class="con">
                 <div id="tab01">
                   <div class="lineBox">
                     <div class="searchBox-select">
-                      <div class="select select-inner w288px" id="svcmodfi-title-01">
-                        <span class="placeholder"><span class="fcGy"> 테스트 </span></span>
-                        <div class="list">
-                          <ul>
-                            <li>111</li>
-                            <li>111</li>
-                            <li>222</li>
-                          </ul>
-                        </div>
-                      </div>
-                   
+                      <ul class="select-inner" OnClick="location.href ='#'" style="cursor:pointer;">
+                        <li class="date">
+                          <a href="">
+                            <p class="day">08</p>
+                            <p class="yearmonth">24.01</p>
+                          </a>
+                        </li>
+                        <li><a href="" class="notice_tit">USG코딩오픈메타캠퍼스 기업체 협력모델 본과정 프로그램 제1기 교육생 모집현황</a></li>
+                        <li class="arrow mlf_auto"><img class="img_float" src="../front/images/ico_arrow_long.svg" alt="arrow"></li>
+                      </ul>
+                      <hr class="new3">
+                      <ul class="select-inner" OnClick="location.href ='#'" style="cursor:pointer;">
+                        <li class="date">
+                          <a href="">
+                            <p class="day">31</p>
+                            <p class="yearmonth">24.01</p>
+                          </a>
+                        </li>
+                        <li><a href="" class="notice_tit">[홍보영상]_USG코딩오픈메타캠퍼스 기업체 협력모델 교육프로그램(산업디지털트윈)</a></li>
+                        <li class="arrow mlf_auto"><img class="img_float" src="../front/images/ico_arrow_long.svg" alt="arrow"></li>
+                      </ul>
+                      <hr class="new3">
+                      <ul class="select-inner" OnClick="location.href ='#'" style="cursor:pointer;">
+                        <li class="date">
+                          <a href="">
+                            <p class="day">31</p>
+                            <p class="yearmonth">24.01</p>
+                          </a>
+                        </li>
+                        <li><a href="" class="notice_tit">[홍보영상]_USG코딩오픈메타캠퍼스 기업체 협력모델 교육프로그램(첨단 제조업)</a></li>
+                        <li class="arrow mlf_auto"><img class="img_float" src="../front/images/ico_arrow_long.svg" alt="arrow"></li>
+                      </ul>
                     </div>
                   </div>
-                 
                 </div>
                 <div id="tab02">
-                  <div class="subToptab">
-                    <ul class="topTab-navWrap">
-                      <li class="topTab-nav on"> aaaaa </li>
-                      <li class="topTab-nav">bbbb</li>
-                      <li class="topTab-nav">cccc</li>
-                      <li class="topTab-nav">dddd</li>
-                    </ul>
-                  
+                  <div class="lineBox">
+                    <div class="searchBox-select">
+                      <ul class="select-inner">
+                        <li class="date">
+                          <a href="">
+                            <p class="day">09</p>
+                            <p class="yearmonth">24.01</p>
+                          </a>
+                        </li>
+                        <li><a href="" class="notice_tit">USG코딩오픈메타캠퍼스 기업체 협력모델 본과정 프로그램 제1기 교육생 모집현황</a></li>
+                        <li class="arrow"><img class="img_float" src="../front/images/ico_arrow_long.svg" alt="arrow"></li>
+                      </ul>
+                      <hr class="new3">
+                      <ul class="select-inner">
+                        <li class="date">
+                          <a href="">
+                            <p class="day">20</p>
+                            <p class="yearmonth">24.01</p>
+                          </a>
+                        </li>
+                        <li><a href="" class="notice_tit">[홍보영상]_USG코딩오픈메타캠퍼스 기업체 협력모델 교육프로그램(산업디지털트윈)</a></li>
+                        <li class="arrow"><img class="img_float" src="../front/images/ico_arrow_long.svg" alt="arrow"></li>
+                      </ul>
+                      <hr class="new3">
+                      <ul class="select-inner">
+                        <li class="date">
+                          <a href="">
+                            <p class="day">25</p>
+                            <p class="yearmonth">24.01</p>
+                          </a>
+                        </li>
+                        <li><a href="" class="notice_tit">[홍보영상]_USG코딩오픈메타캠퍼스 기업체 협력모델 교육프로그램(첨단 제조업)</a></li>
+                        <li class="arrow"><img class="img_float" src="../front/images/ico_arrow_long.svg" alt="arrow"></li>
+                      </ul>
+                    </div>
                   </div>
+                </div>
+                <div id="tab03">
+                  1213121
+                </div>
+                <div id="tab04">
+                  12132322323
                 </div>
               </div>
             </div>
-          
-            
+          </div>
 
+        </div>
       </section>
-
     </div>
 
+    <div class="footerWrap">
 
-  </div>
+      <section>
+        <!-- <div class="util_link_outer">
+          <div class="util_link">
+            <div class="util_link_list footer_autoplay slick-initialized slick-slider">
+              교육부, 한국연구재단, 울산경남지역혁신플랫폼, 경상남도, 울산광역시, 경남대학교, 울산경남지역혁신플랫폼 ict
+              <div class="slick-list">
+                <div class="slick-track" style="opacity: 1; width: 4560px; transform: translate3d(-1920px, 0px, 0px);"><a href="http://gn-platform.or.kr/main.do" target="_blank" class="util_link_item slick-slide slick-cloned" tabindex="-1" style="width: 230px;" data-slick-index="-5" aria-hidden="true"><img src="../front/images/logo_platform.png" class="util_link_img" alt="울산·경남지역혁신플랫폼"></a><a href="https://www.gyeongnam.go.kr/index.gyeong" target="_blank" class="util_link_item slick-slide slick-cloned" tabindex="-1" style="width: 230px;" data-slick-index="-4" aria-hidden="true"><img src="../front/images/logo_gyeongnam.png" class="util_link_img" alt="경상남도"></a><a href="https://www.ulsan.go.kr/u/rep/main.ulsan" target="_blank" class="util_link_item slick-slide slick-cloned" tabindex="-1" style="width: 230px;" data-slick-index="-3" aria-hidden="true"><img src="../front/images/logo_ulsan.png" class="util_link_img" alt="울산광역시"></a><a href="https://www.kyungnam.ac.kr" target="_blank" class="util_link_item slick-slide slick-cloned" tabindex="-1" style="width: 230px;" data-slick-index="-2" aria-hidden="true"><img src="../front/images/logo_kyungnam_univ.png" class="util_link_img" alt="경남대학교"></a><a href="https://platform.kyungnam.ac.kr/kr/" target="_blank" class="util_link_item slick-slide slick-cloned" tabindex="-1" style="width: 230px;" data-slick-index="-1" aria-hidden="true"><img src="../front/images/logo_ict.png" class="util_link_img" alt="울산·경남지역혁신플랫폼 스마트제조ICT사업단"></a><a href="https://www.moe.go.kr/main.do?s=moe" target="_blank" class="util_link_item slick-slide" tabindex="-1" style="width: 230px;" data-slick-index="0" aria-hidden="true"><img src="../front/images/logo_moe.png" class="util_link_img" alt="교육부"></a><a href="https://www.nrf.re.kr/index" target="_blank" class="util_link_item slick-slide" tabindex="-1" style="width: 230px;" data-slick-index="1" aria-hidden="true"><img src="../front/images/logo_nrf.png" class="util_link_img" alt="한국연구재단"></a><a href="http://gn-platform.or.kr/main.do" target="_blank" class="util_link_item slick-slide" tabindex="-1" style="width: 230px;" data-slick-index="2" aria-hidden="true"><img src="../front/images/logo_platform.png" class="util_link_img" alt="울산·경남지역혁신플랫폼"></a><a href="https://www.gyeongnam.go.kr/index.gyeong" target="_blank" class="util_link_item slick-slide slick-current slick-active" tabindex="0" style="width: 230px;" data-slick-index="3" aria-hidden="false"><img src="../front/images/logo_gyeongnam.png" class="util_link_img" alt="경상남도"></a><a href="https://www.ulsan.go.kr/u/rep/main.ulsan" target="_blank" class="util_link_item slick-slide slick-active" tabindex="0" style="width: 230px;" data-slick-index="4" aria-hidden="false"><img src="../front/images/logo_ulsan.png" class="util_link_img" alt="울산광역시"></a><a href="https://www.kyungnam.ac.kr" target="_blank" class="util_link_item slick-slide slick-active" tabindex="0" style="width: 230px;" data-slick-index="5" aria-hidden="false"><img src="../front/images/logo_kyungnam_univ.png" class="util_link_img" alt="경남대학교"></a><a href="https://platform.kyungnam.ac.kr/kr/" target="_blank" class="util_link_item slick-slide slick-active" tabindex="0" style="width: 230px;" data-slick-index="6" aria-hidden="false"><img src="../front/images/logo_ict.png" class="util_link_img" alt="울산·경남지역혁신플랫폼 스마트제조ICT사업단"></a><a href="https://www.moe.go.kr/main.do?s=moe" target="_blank" class="util_link_item slick-slide slick-cloned slick-active" tabindex="-1" style="width: 230px;" data-slick-index="7" aria-hidden="false"><img src="../front/images/logo_moe.png" class="util_link_img" alt="교육부"></a><a href="https://www.nrf.re.kr/index" target="_blank" class="util_link_item slick-slide slick-cloned" tabindex="-1" style="width: 230px;" data-slick-index="8" aria-hidden="true"><img src="../front/images/logo_nrf.png" class="util_link_img" alt="한국연구재단"></a><a href="http://gn-platform.or.kr/main.do" target="_blank" class="util_link_item slick-slide slick-cloned" tabindex="-1" style="width: 230px;" data-slick-index="9" aria-hidden="true"><img src="../front/images/logo_platform.png" class="util_link_img" alt="울산·경남지역혁신플랫폼"></a><a href="https://www.gyeongnam.go.kr/index.gyeong" target="_blank" class="util_link_item slick-slide slick-cloned" tabindex="-1" style="width: 230px;" data-slick-index="10" aria-hidden="true"><img src="../front/images/logo_gyeongnam.png" class="util_link_img" alt="경상남도"></a><a href="https://www.ulsan.go.kr/u/rep/main.ulsan" target="_blank" class="util_link_item slick-slide slick-cloned" tabindex="-1" style="width: 230px;" data-slick-index="11" aria-hidden="true"><img src="../front/images/logo_ulsan.png" class="util_link_img" alt="울산광역시"></a><a href="https://www.kyungnam.ac.kr" target="_blank" class="util_link_item slick-slide slick-cloned" tabindex="-1" style="width: 230px;" data-slick-index="12" aria-hidden="true"><img src="../front/images/logo_kyungnam_univ.png" class="util_link_img" alt="경남대학교"></a><a href="https://platform.kyungnam.ac.kr/kr/" target="_blank" class="util_link_item slick-slide slick-cloned" tabindex="-1" style="width: 230px;" data-slick-index="13" aria-hidden="true"><img src="../front/images/logo_ict.png" class="util_link_img" alt="울산·경남지역혁신플랫폼 스마트제조ICT사업단"></a></div>
+              </div>
+            </div>
+            <div class="arrow prev slick-arrow" id="footer_arrow_prev" style="display: block;"><span class="arrow_hidden">prev</span></div>
+            <div class="arrow next slick-arrow" id="footer_arrow_next" style="display: block;"><span class="arrow_hidden">next</span></div>
+          </div>
+        </div> -->
+<!-- 
+        <div id="footer">
+          <div class="inner">
+            <div class="footer_logoArea" style="">
+              <div class="foot_logo"><span>USG코딩오픈메타캠퍼스</span></div>
+              <div class="tail_menu">
+                <ul>
+                  <li><a href="javascript:void(0);" onclick="gnbMenuAction('/common/privacyTerms.do')" class="color_orange">개인정보처리방침</a></li>
+                  <li><a href="javascript:void(0);" onclick="gnbMenuAction('/common/useTerms.do')">이용약관</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="tail_menu">
+            </div>
+            <div class="addr">
+              <p class="txt_add">(51767 ) 경상남도 창원시 마산합포구 경남대학로 7 창조관 3층 스마트제조ICT사업단 (USG코딩오픈메타캠퍼스)</p>
 
+              <p class="copyright mt20">USG코딩오픈메타캠퍼스 센터는 경남대학교가 운영하고 있으며, 교육 및 업무에 대한 모든 책임은 경남대학교에 있습니다.</p>
+              <p class="copyright mt05">Copyrightⓒ USG코딩오픈메타캠퍼스 센터 ALL RIGHT RESERVED</p>
+            </div>
+          </div>
+        </div> -->
+      </section>
+    </div>
+
+ <script src="../front/js/momTab.js"></script>
 </body>
-
 </html>
